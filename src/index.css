@@ -1,0 +1,124 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cyber theme colors */
+  --primary-blue: #0066ff;
+  --primary-dark: #001933;
+  --primary-light: #4d94ff;
+  --accent-neon: #00ffff;
+  --accent-purple: #9900ff;
+  --text-light: #e6f0ff;
+  --text-dark: #002b4d;
+  --bg-dark: #000d1a;
+  --bg-gradient: linear-gradient(135deg, #001933 0%, #003366 100%);
+  --card-bg: rgba(0, 26, 51, 0.8);
+  --glow-effect: 0 0 10px rgba(0, 102, 255, 0.7), 0 0 20px rgba(0, 102, 255, 0.5);
+  --neon-border: 1px solid var(--accent-neon);
+  
+  /* Typography */
+  font-family: 'Rajdhani', 'Orbitron', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Theme settings */
+  color-scheme: dark;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+
+  /* Font rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global link styles */
+a {
+  font-weight: 500;
+  color: var(--primary-light);
+  text-decoration: inherit;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-neon);
+  text-shadow: 0 0 5px var(--accent-neon);
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 20%),
+    var(--bg-gradient);
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h2, h3, h4 {
+  letter-spacing: 0.5px;
+}
+
+/* Button styles */
+button {
+  border-radius: 5px;
+  border: 1px solid var(--primary-blue);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgba(0, 13, 26, 0.9);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  border-color: var(--accent-neon);
+  background-color: rgba(0, 102, 255, 0.2);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent-neon);
+}
+
+/* Selection styles */
+::selection {
+  background: var(--primary-blue);
+  color: var(--bg-dark);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-neon);
+}
